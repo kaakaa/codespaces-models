@@ -19,7 +19,7 @@ const modelName = "gpt-4o-mini";
 
 export async function main() {
 
-  const client = new ModelClient(endpoint, new AzureKeyCredential(token));
+  const client = ModelClient(endpoint, new AzureKeyCredential(token));
 
   const response = await client.path("/chat/completions").post({
     body: {

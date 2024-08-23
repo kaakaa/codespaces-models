@@ -16,7 +16,7 @@ const modelName = "text-embedding-3-small";
 
 export async function main() {
 
-  const client = new ModelClient(endpoint, new AzureKeyCredential(token));
+  const client = ModelClient(endpoint, new AzureKeyCredential(token));
 
   const response = await client.path("/embeddings").post({
     body: {

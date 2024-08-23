@@ -60,7 +60,7 @@ export async function main() {
     }
   };
 
-  const client = new ModelClient(endpoint, new AzureKeyCredential(token));
+  const client = ModelClient(endpoint, new AzureKeyCredential(token));
 
   let messages=[
     {role: "system", content: "You an assistant that helps users find flight information."},
